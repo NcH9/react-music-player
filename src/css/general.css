@@ -1,0 +1,39 @@
+.flex_center {
+    display: flex;
+    justify-content: center;
+    place-items: center;
+}
+.flex_start {
+    display: flex;
+    justify-content: flex-start;
+}
+.flex_end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.grid1 {
+    display: grid;
+}
+.grid2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.gradient_text {
+    margin: 10px 0; 
+    font-size: 70px;
+    
+    background: linear-gradient(to right, rgba(0, 174, 255, 0.5), rgba(59, 0, 196, 0.5));
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+.home {
+    display: grid;
+    grid-template-columns: 100%;
+}
+.page {
+    display: grid;
+    grid-template-columns: 720px;
+}
+
