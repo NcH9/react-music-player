@@ -61,7 +61,6 @@ class SearchBar extends React.Component {
                         </div>
                         <button type="submit">Search</button>
                     </form>
-                    <Player />
                     <Results results={this.state.result} />
                 </div>
             </div>

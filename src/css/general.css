@@ -11,6 +11,13 @@
     display: flex;
     justify-content: flex-end;
 }
+.flex_around {
+    display: flex;
+    justify-content: space-around;
+}
+.mg-10 {
+    margin: 10px;
+}
 
 .grid1 {
     display: grid;
@@ -23,6 +30,19 @@
     margin: 10px 0; 
     font-size: 70px;
     
+    background: linear-gradient(to right, rgba(0, 174, 255, 0.5), rgba(59, 0, 196, 0.5));
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+}
+
+.about_page {
+    margin: 10px 0; 
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+
     background: linear-gradient(to right, rgba(0, 174, 255, 0.5), rgba(59, 0, 196, 0.5));
     background-clip: text;
     -webkit-background-clip: text; 

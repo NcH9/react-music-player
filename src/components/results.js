@@ -1,13 +1,18 @@
 import React from "react";
+import Player from "./player";
 
 class Results extends React.Component {
+    state = {
+        currentTrack: null,
+    }
     convertMillisecondsToTime = (milliseconds) => {
         const minutes = Math.floor(milliseconds / 60000);
         const seconds = ((milliseconds % 60000) / 1000).toFixed(0);
         return `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
     };
 
-    playThisSong = (id) => {
+    playThisSong = (id, track) => {
+        this.setState({currentTrack: track});
         const audio = document.getElementById(id);
         audio.volume = 0.1;
         console.log(audio);
@@ -43,7 +48,7 @@ class Results extends React.Component {
                     <div className="flex_end">
                         <div className="flex_center">
                             <button 
-                                onClick={() => {this.playThisSong(index)}}
+                                onClick={() => {this.playThisSong(index, item)}}
                             >
                                 <audio src={item.previewUrl} id={index} />
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-play" viewBox="0 0 16 16">
@@ -57,6 +62,7 @@ class Results extends React.Component {
         ))
         return (
             <div>
+                <Player currentTrack={this.state.currentTrack}/>
                 {list}
             </div>
         );
